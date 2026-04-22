@@ -10,9 +10,11 @@ while numofquestion < 10:
         print(question)
         for name in huntforthewilderpeopleQandA.items():
             usrinp = input()
-            usrinp.lower()
-            usrinp.title()
+            usrinp = usrinp.lower()
+            usrinp = usrinp.title()
             print(usrinp)
+            print(name)
+            print(question)
             if usrinp in name:
                 print("good job its correct!")
                 score = score + 1
