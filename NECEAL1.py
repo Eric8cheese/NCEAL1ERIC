@@ -1,27 +1,27 @@
 '''This is a quiz on the movie "hunt for the wilderpeople" made by Eric Huang'''
 
-huntforthewilderpeopleQandA = {"What is the directors name?" : "Taika Waititi", "What type of poem does Ricky love to write?" : "Haiku", "What is the name of Ricky's foster father?" : "Uncle Hec", "One part of the chase sequence in the movie is very similar to an advertisement with Barry Crump in it. What brand of ute was the advertisement promoting?" : "Toyota", "What was the name of the man that Uncle Hec and Ricky hide out at?" : "Psycho Sam", "What is the name of the girl who finds Ricky" : "Kahu", "Who argue over who is more like the terminator?" : "Paula and Ricky", "What are names of the dogs?" : "Zag And Tupac", "What kind of chocolate bar is advertised?" : "Flake", "What is the name of the social welfare officer?" : "Paula"}
+huntforthewilderpeopleQandA = {"What is the directors name?" : "taika taititi", "What type of poem does Ricky love to write?" : "haiku", "What is the name of Ricky's foster father?" : "uncle hec", "One part of the chase sequence in the movie is very similar to an advertisement with Barry Crump in it. What brand of ute was the advertisement promoting?" : "toyota", "What was the name of the man that Uncle Hec and Ricky hide out at?" : "psycho sam", "What is the name of the girl who finds Ricky" : "kahu", "Who argue over who is more like the terminator?" : "paula and ricky", "What are names of the dogs?" : "zag And tupac", "What kind of chocolate bar is advertised?" : "flake", "What is the name of the social welfare officer?" : "paula"}
 numofquestion = 0
 usrinp = ""
 score = 0
+POINTS = 1
+TOTALQANDA = len(huntforthewilderpeopleQandA)
 
-while numofquestion < 10:
-    for question in huntforthewilderpeopleQandA.keys():
+while numofquestion < TOTALQANDA:
+    for question, answer in huntforthewilderpeopleQandA.items():
         print(question)
-        for name in huntforthewilderpeopleQandA.items():
-            usrinp = input()
-            usrinp = usrinp.lower()
-            usrinp = usrinp.title()
-            print(usrinp)
-            print(name)
-            print(question)
-            if usrinp in name:
-                print("good job its correct!")
-                score = score + 1
-                numofquestion = numofquestion + 1
-                break
-            else:
-                print("idiot")
-                numofquestion = numofquestion + 1
-                break
+        usrinp = input()
+        usrinp = usrinp.lower()
+        
+        #These print statments are for debug
+        print(usrinp)
+        print(answer)
+
+        if usrinp in answer:
+            print("good job its correct!")
+            score = score + POINTS
+            numofquestion = numofquestion + 1
+        else:
+            print(f"That is incorrect, the answer was {answer}")
+            numofquestion = numofquestion + 1
         
