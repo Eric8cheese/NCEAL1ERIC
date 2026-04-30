@@ -30,27 +30,27 @@ while numofquesdone < TOTALQANDA:
     for question, answer in huntforthewilderpeopleQandA.items():
         print(question)
         usrinp = input()
+
+        #these are for testing bounderys
         wordcheck = len(usrinp)
+        numbercheck = usrinp.isnumeric()
 
         #The first if statment checks for people who just put lots of letters 
         # and the secound if statment catches numbers
-        if wordcheck > 16:
+        while wordcheck > 12 or numbercheck == True:
             print("What you have entered is too long! Please try again.")
             usrinp = input()
-        else: 
+            wordcheck = len(usrinp)
             numbercheck = usrinp.isnumeric()
-            if numbercheck == True:
-                print("Invalid input! Letters only!")
-                usrinp = input()
-            else:
-                usrinp = usrinp.lower()
-                if usrinp in answer:
-                    print("good job its correct!")
-                    score = score + POINTS
-                    numofquesdone = numofquesdone + 1
-                else:
-                    print(f"That is incorrect, the answer was {answer}")
-                    numofquesdone = numofquesdone + 1
+
+        usrinp = usrinp.lower()
+        if usrinp in answer:
+            print("good job its correct!")
+            score = score + POINTS
+            numofquesdone = numofquesdone + 1
+        else:
+            print(f"That is incorrect, the answer was {answer}")
+            numofquesdone = numofquesdone + 1
 
 #this part of the code gives more "user friendly" output before giving the score
 print("Congratulations you finished the quiz!")
