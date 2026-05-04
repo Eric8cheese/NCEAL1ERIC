@@ -50,7 +50,7 @@ while numofquesdone < TOTALQANDA:
             numbercheck = usrinp.isnumeric()
 
         usrinp = usrinp.lower()
-        if usrinp == answer:
+        if usrinp in answer and usrinp == answer:
             print("good job its correct!")
             score = score + POINTS
             numofquesdone = numofquesdone + 1
@@ -65,6 +65,8 @@ while numofquesdone < TOTALQANDA:
 print("Congratulations you finished the quiz!")
 print(f"The score you got was {score} out of {TOTALQANDA}!")
 input("press enter to exit")
+
+
 
 #⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀
 #⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀
@@ -89,3 +91,4 @@ input("press enter to exit")
 #⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠹⡜⠀⠀⠀
 #⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀
 #⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀
+# This cat will get me an excellent
