@@ -7,7 +7,7 @@ import os
 # change the questions change the dict, using question:answer.
 huntforthewilderpeopleQandA = {"What is the directors name?" : "taika waititi", 
                                 "What type of poem does Ricky love to write?" : "haiku", 
-                                "What is the name of Ricky's foster father?" : "uncle hec", 
+                                "What is the name of the girl who dies in juvey?" : "amber", 
                                 "One part of the chase sequence in the movie is very similar to an advertisement with Barry Crump in it. What brand of ute was the advertisement promoting?" : "toyota", 
                                 "What was the name of the man that Uncle Hec and Ricky hide out at?" : "psycho sam", 
                                 "What is the name of the girl who finds Ricky" : "kahu", 
