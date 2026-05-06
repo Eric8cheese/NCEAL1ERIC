@@ -37,10 +37,11 @@ while numofquesdone < TOTALQANDA:
         #these are for testing bounderys
         wordcheck = len(usrinp)
         numbercheck = usrinp.isnumeric()
+        has_special = not usrinp.isalnum()
 
         #this while loop checks for bounderys then gives the usr the change to
         #try again
-        while wordcheck > WORDLIMIT or numbercheck == True or usrinp == "" or usrinp.startswith('-'):
+        while wordcheck > WORDLIMIT or numbercheck == True or usrinp == "" or usrinp.startswith('-') or has_special == True:
             print("Invalid input! Please try again.")
             time.sleep(1)
             os.system('cls')
