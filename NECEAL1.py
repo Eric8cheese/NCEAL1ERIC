@@ -39,6 +39,7 @@ while numofquesdone < TOTALQANDA:
         wordcheck = len(usrinp)
         numbercheck = usrinp.isnumeric()
         has_special = not usrinp.isalnum()
+        passaccuracy = 70
         
 
         #this while loop checks for bounderys then gives the usr the chance to
@@ -55,15 +56,13 @@ while numofquesdone < TOTALQANDA:
 
         usrinp = usrinp.lower()
         #fuzz.ratio works by comparing the usrinp and answer and gives a 
-        # accuracy score, if its over 78 its correct.
+        # accuracy score, if its over 70 its correct.
         accuracy_test = fuzz.ratio(usrinp, answer)
-        if accuracy_test > 78:
-            print(accuracy_test)
+        if accuracy_test > passaccuracy:
             print("good job its correct!")
             score = score + POINTS
             numofquesdone = numofquesdone + 1
         else:
-            print(score)
             print(f"That is incorrect, the answer was {answer}")
             numofquesdone = numofquesdone + 1
 
@@ -74,8 +73,10 @@ while numofquesdone < TOTALQANDA:
 # they did before giving the score
 if score < 4:
     print("Did you even watch the movie?")
-elif score < 8:
+elif score < 7:
     print("Good job you did great")
+elif score <= 9:
+    print("You must love this film")
 else:
     print("GET A JOB")
 
