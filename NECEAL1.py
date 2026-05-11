@@ -2,7 +2,6 @@
 
 import time
 import os
-from fuzzywuzzy import process
 from fuzzywuzzy import fuzz
 
 #This part sets up the questions and adds the consistant and temp varables, to 
@@ -57,8 +56,9 @@ while numofquesdone < TOTALQANDA:
         usrinp = usrinp.lower()
         #fuzz.ratio works by comparing the usrinp and answer and gives a 
         # accuracy score, if its over 78 its correct.
-        score = fuzz.ratio(usrinp, answer)
-        if score > 78:
+        accuracy_test = fuzz.ratio(usrinp, answer)
+        if accuracy_test > 78:
+            print(accuracy_test)
             print("good job its correct!")
             score = score + POINTS
             numofquesdone = numofquesdone + 1
